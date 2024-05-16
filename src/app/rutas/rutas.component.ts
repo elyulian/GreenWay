@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../shared/services/auth.service';
 
+
 @Component({
   selector: 'app-rutas',
   templateUrl: './rutas.component.html',
@@ -8,10 +9,18 @@ import { AuthService } from '../shared/services/auth.service';
 })
 export class RutasComponent {
 
-  constructor(private authService: AuthService){
+  constructor(
+    private authService: AuthService,
+  ) {
+
   }
+
+  ngOnInit(): void {
+  }
+
 
   cerrarSession(){
     this.authService.logOut();
   }
+
 }

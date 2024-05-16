@@ -25,13 +25,25 @@
                 <div class="line"></div>
             </div>
 
-            <form>
+            <form [formGroup]="formularioIngreso" (ngSubmit)="submit()">
             <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" #email placeholder="Ingrese su Correo" required>
+                <input type="email" [class.is-danger]="formularioIngreso.get('email')" class="form-control" formControlName="email" id="floatingInput" #email placeholder="Ingrese su Correo" required>
+                <a *ngIf="this.formularioIngreso.get('email')?.errors?.['required']">
+                    (El correo no puede quedar vacío)
+                </a>
+                <a *ngIf="this.formularioIngreso.get('email')?.errors?.['email']">
+                    (El correo no es correcto)
+                </a>
                 <label for="floatingInput">Correo</label>
               </div>
               <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" #password placeholder="Ingrese su contraseña">
+                <input type="password" class="form-control" formControlName="password" id="floatingPassword" #password placeholder="Ingrese su contraseña"> 
+                <a *ngIf="this.formularioIngreso.get('password')?.errors?.['required']">
+                    (la contraseña no puede quedar vacía)
+                </a>
+                <a *ngIf="this.formularioIngreso.get('password')?.errors?.['pattern']">
+                    (la contraseña no es correcta)
+                </a>
                 <label for="floatingPassword">Contraseña</label>
               </div>
                 <a href="#">Olvidaste tu contraseña?</a>

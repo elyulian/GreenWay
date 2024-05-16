@@ -10,12 +10,19 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class RegistroComponent {
   constructor(private authService: AuthService){
   }
-  registroForm:FormGroup = new FormGroup({
-    email: new FormControl('',Validators.required),
-    password: new FormControl('')
-  
-  })
+  registroForm = new FormGroup({
+    email: new FormControl('', [Validators.required, Validators.email]),
+    password: new FormControl('', [Validators.required, Validators.pattern(/^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/)])
+  });
 
+    resultado: string | undefined;
+  
+  submit() {
+    if (this.registroForm.valid)
+      this.resultado = "Todos los datos son válidos";
+    else
+      this.resultado = "Hay datos inválidos en el formulario";
+  }
   registrar(email:string, password: string){
     this.authService.registrarUsuario(email,password)
   }

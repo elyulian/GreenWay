@@ -21,13 +21,29 @@
                 <div class="line"></div>
             </div>
 
-            <form>
+            <form [formGroup]="registroForm" (ngSubmit)="submit()">
             <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" #email placeholder="Ingrese su Correo" required>
+                <input type="email"  class="form-control" formControlName="email" id="floatingInput" #email placeholder="Ingrese su Correo" required>
+                <a *ngIf="this.registroForm.get('email')?.errors?.['required']">
+                  (El correo no puede quedar vacío)
+              </a>
+              <a *ngIf="this.registroForm.get('email')?.errors?.['email']">
+                  (El correo no es correcto)
+              </a>
                 <label for="floatingInput">Correo</label>
               </div>
               <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" #password placeholder="Ingrese su contraseña">
+                <input type="password"  class="form-control" formControlName="password" id="floatingPassword" #password placeholder="Ingrese su contraseña">
+                <a *ngIf="this.registroForm.get('password')?.errors?.['required']">
+                  (El correo no puede quedar vacío)
+              </a>
+              <a *ngIf="this.registroForm.get('password')?.errors?.['pattern']">
+                  (la contraseña no es correcta)
+                  Minimo 8 caracteres
+                  Maximo 16
+                  Al menos una letra mayúscula
+                  Al menos una letra minucula
+              </a>
                 <label for="floatingPassword">Contraseña</label>
               </div>
               <p class="text-sm font-light text-gray-950 dark:text-gray-950">

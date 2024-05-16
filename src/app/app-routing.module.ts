@@ -12,12 +12,12 @@ import { ContactanosComponent } from './contactanos/contactanos.component';
 const routes: Routes = [
   {path:'', redirectTo: 'login', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
-  {path: 'home', component: HomeComponent, canActivate: [authGuard]},
+  {path: 'home', component: HomeComponent},
   {path: 'registro',component: RegistroComponent},
   {path: 'servicios', component: ServiciosComponent, canActivate: [authGuard]},
   {path: 'rutas', component: RutasComponent, canActivate: [authGuard]},
   {path: 'rutas/:rutaId', component: RutasDetalleComponent, canActivate: [authGuard]},
-  {path: 'contacto',component: ContactanosComponent, canActivate: [authGuard]}
+  {path: 'contacto',component: ContactanosComponent, canActivate: [authGuard]},
 
 ];
 
