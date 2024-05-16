@@ -4,3 +4,14 @@
     display: flex;
   align-items: center;  
 }
+.imagenes-texto{
+  margin-left: 100px;
+}
+.titulosTexto{
+  padding-top: 50px;
+padding-left: 600px;}
+
+.textoabajo{
+  padding-left: 50px;
+  padding-right: 50px;
+}

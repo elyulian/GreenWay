@@ -1,0 +1,23 @@
+.titulosTexto{
+    padding-top: 50px;
+    padding-left: 500px;
+    padding-bottom: 50px;
+}
+
+.cards{
+    align-items: center;
+    padding-left: 60px;
+}
+
+.card-recoleccion{
+    padding-left: 80px;
+}
+.card-group mt-3{
+    padding-left: 80px;
+
+}
+.textoabajo{
+    margin-top: auto;
+    padding-left: 60px;
+    padding-right: 60px;
+}

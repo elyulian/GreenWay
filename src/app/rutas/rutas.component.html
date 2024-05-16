@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<header>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img src="../../../assets/images/greenway.png" alt="GreenWay">
@@ -15,9 +16,8 @@
             <a class="nav-link" routerLink="/rutas">Rutas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/Contactanos">Contactanos</a>
+            <a class="nav-link" routerLink="/contactos">contactos</a>
           </li>
-       
         </ul>
       </div>
       <a class="navbar-brand" class="btn btn-danger" href="#" (click)="cerrarSession()">Cerrar Sesión</a>
@@ -26,5 +26,16 @@
       </button>
     </div>
   </nav>
-
-<p>rutas works!</p>
+</header>
+<body>
+  <p>rutas works!</p>
+</body>
+<footer class="py-3 my-4">
+  <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+    <li class="nav-item"><a href="http://www.tabio-cundinamarca.gov.co/" class="nav-link px-2 text-body-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tabio</font></font></a></li>
+    <li class="nav-item"><a href="https://www.ucundinamarca.edu.co/" class="nav-link px-2 text-body-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">U. Cundinamarca</font></font></a></li>
+    <li class="nav-item"><a routerLink="Home" class="nav-link px-2 text-body-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Linea #</font></font></a></li>
+    <li class="nav-item"><a href="https://www.jimdo.com/es/blog/preguntas-frecuentes-en-pagina-web/" class="nav-link px-2 text-body-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Preguntas frecuentes</font></font></a></li>
+  </ul>
+  <p class="text-center text-body-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">© 2024 GreenWay Inc.</font></font></p>
+</footer>
