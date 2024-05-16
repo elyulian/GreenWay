@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="registro.component.css">
+    <title>GreenWay</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="signup-section">
+            <header>Registro</header>
+
+            <div class="separator">
+                <div class="line"></div>
+                <p>Con</p>
+                <div class="line"></div>
+            </div>
+
+            <form>
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" #email placeholder="Ingrese su Correo" required>
+                <label for="floatingInput">Correo</label>
+              </div>
+              <div class="form-floating">
+                <input type="password" class="form-control" id="floatingPassword" #password placeholder="Ingrese su contraseña">
+                <label for="floatingPassword">Contraseña</label>
+              </div>
+              <p class="text-sm font-light text-gray-950 dark:text-gray-950">
+                ya tienes una cuenta?
+                <a routerLink="/login">Logueate</a>
+              </p>
+                <button type="submit" class="btn btn-light" (click)="registrar(email.value, password.value)">Registro</button>
+            </form>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
