@@ -41,12 +41,12 @@
                 <a *ngIf="this.formularioIngreso.get('password')?.errors?.['required']">
                     (la contraseña no puede quedar vacía)
                 </a>
-                <a *ngIf="this.formularioIngreso.get('password')?.errors?.['pattern']">
-                    (la contraseña no es correcta)
-                </a>
                 <label for="floatingPassword">Contraseña</label>
               </div>
                 <a href="#">Olvidaste tu contraseña?</a>
+
+                <ngx-recaptcha2 [siteKey]="siteKey"></ngx-recaptcha2>
+
                 <button class="btn btn-light" type="submit" (click)="login(email.value,password.value)">Login</button>
                 <a type="submit" class="btn btn-danger" routerLink="/registro">Registro</a>
 

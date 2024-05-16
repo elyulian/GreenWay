@@ -16,6 +16,7 @@ import { ServiciosComponent } from './servicios/servicios.component';
 import { ContactanosComponent } from './contactanos/contactanos.component';
 import { RutasDetalleComponent } from './rutas-detalle/rutas-detalle.component';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore'
+import { NgxCaptchaModule } from 'ngx-captcha';
 
 @NgModule({
   declarations: [
@@ -27,11 +28,13 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore'
     ServiciosComponent,
     ContactanosComponent,
     RutasDetalleComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    NgxCaptchaModule,
     ReactiveFormsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),

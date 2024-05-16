@@ -8,7 +8,9 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./registro.component.css']
 })
 export class RegistroComponent {
+  siteKey:string;
   constructor(private authService: AuthService){
+    this.siteKey="6LfWcd4pAAAAAHVpMmX_SbDBtL4Sc90rtLwwX7nw";
   }
   registroForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
